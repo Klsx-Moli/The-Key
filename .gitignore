@@ -1,0 +1,50 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / coverage artifacts
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Run artifacts (generated at runtime, not source)
+runs/
+workspaces/
+.thekey/
+# Local evidence-signing key (repo-local, derived from machine; not shipped)
+.thekey/evidence.key
+evidence.key
+
+# Frozen baseline working dir (local audit artifact, not shipped)
+development-audit/
+
+# Private pre-public provenance imports (never publish raw chat exports)
+/evidence-private/build-week/chat-exports/
+/evidence-private/build-week/PRIVATE_IMPORT_MANIFEST.json
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local node / package caches
+node_modules/
+
+# Local Build Week runs are reproducible but can contain large extracted
+# packages and machine-specific runtime paths. Curated baseline/final evidence
+# is force-added explicitly to Git.
+/artifacts/
+/evidence/ui/native-dashboard/
+/evidence/ui/pixel-perfect/window_capture_probe.png

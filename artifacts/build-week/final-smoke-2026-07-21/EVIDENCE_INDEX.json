@@ -1,0 +1,106 @@
+{
+  "schema_version": "v1",
+  "purpose": "Content-addressed index of the curated evidence retained for the final packaged-backend smoke flows.",
+  "files": [
+    {
+      "path": "SMOKE_EXECUTION.json",
+      "sha256": "7c85324b47da1eb214c99ddd786ebd7b5c4888a3433ff58e7730ca677f0f0cc5",
+      "purpose": "Package precondition, two real WPF launches, flow statuses, and relevant regression result."
+    },
+    {
+      "path": "owner-ui-smoke/01-home.png",
+      "sha256": "7cfab6ee19556173cdcd445802f7c0cbf8e39d1812c45074a0409d1b54cd42dc",
+      "purpose": "Owner-verified UI capture of the usable THEKEY WPF home screen."
+    },
+    {
+      "path": "owner-ui-smoke/02-inspection-pass.png",
+      "sha256": "db678f8856bea991f024313113b3de092b30e86f870b16109b77b1cdf82c4db4",
+      "purpose": "Owner-verified UI capture confirming the read-only inspection flow passed."
+    },
+    {
+      "path": "owner-ui-smoke/03-verification-pass.png",
+      "sha256": "ea3796ce6e4677d1f068e4f9a81bde1a28db9d122f9afbbce1ebe764f1d5c643",
+      "purpose": "Owner-verified UI capture confirming isolated verification and persisted evidence passed."
+    },
+    {
+      "path": "owner-ui-smoke/04-repair-pass.png",
+      "sha256": "53aeb19cd86c5ea5744f0be90d0730bf1cbc1b3b49b82b6b463f452ad98b9c61",
+      "purpose": "Owner-verified UI capture confirming repair, backup, and re-test passed."
+    },
+    {
+      "path": "owner-ui-smoke/05-judge-demo-pass.png",
+      "sha256": "0ae5fc244c5eb303fc79f23ca0fe7853b44553a1c4135d9f22e09c4d45660c55",
+      "purpose": "Owner-verified UI capture confirming the Judge demo completed with the expected result."
+    },
+    {
+      "path": "owner-ui-smoke/06-results.png",
+      "sha256": "31a344cb80a1253d95368ebd5f4288b6e882c661ca51b65d41bbbc17d6a9cc5a",
+      "purpose": "Owner-verified UI capture of persisted real results after the smoke flows."
+    },
+    {
+      "path": "runtime/.thekey/events.db",
+      "sha256": "614f7b54732d3095f90af1cb200bcb84282cf729b00fd804fb71c9d3e75b715f",
+      "purpose": "SQLite event store written by the packaged backend during this smoke run."
+    },
+    {
+      "path": "runtime/.thekey/project-verification/PV-20260721-094238-d84ac8bf/inspection.json",
+      "sha256": "245cffffa4a200a68c313c7ae65d983a6ee58ad1b36ac224a2c3e2a2215e51c2",
+      "purpose": "Read-only inspection of the bundled Python sample."
+    },
+    {
+      "path": "runtime/.thekey/project-verification/PV-20260721-094252-ad04ec3e/verification-evidence.json",
+      "sha256": "119e471a25479c9d34398354f3389637aa733955c5997f0ee55355db20df9c44",
+      "purpose": "Isolated verification with source-unchanged gate."
+    },
+    {
+      "path": "runtime/.thekey/project-repair/PR-20260721-094306-9be571ba/repair-evidence.json",
+      "sha256": "cfdc914e34c89194610dbde4acd85660ce2179819e34f8a0071c20b9d4b746f4",
+      "purpose": "Repair preview; source remained unchanged."
+    },
+    {
+      "path": "runtime/.thekey/project-repair/PR-20260721-094323-3a2a8d59/repair-evidence.json",
+      "sha256": "70f90be0b6520bbd42381984ac659a9add86155368a747b1663ece4125efd84b",
+      "purpose": "Applied, independently verified repair of a disposable working copy."
+    },
+    {
+      "path": "runtime/.thekey/project-repair/PR-20260721-094323-3a2a8d59/backups/calculator.py",
+      "sha256": "f5604449765693677798a0f8c7ab81a392a493941a16b863c02e3d5837dec826",
+      "purpose": "Pre-repair backup retained by the packaged backend."
+    },
+    {
+      "path": "runtime/.thekey/portable/Portable Demo 71ed967bc96d4ad6a9939339b807732e/judge-mode-evidence.json",
+      "sha256": "4db2e159a4c3e23a7fe75b3b89d36f16c6db5cc7e57c28e5eb7004aa9788aee4",
+      "purpose": "Judge demo: four passing gates and bound receipts."
+    },
+    {
+      "path": "runtime/runs/TK-20260721-094338-7P7CMJ/decision.json",
+      "sha256": "038a7290fbc8d6b3e05df3d79b58c36c452d1cc87406b74bd6ee448d347ac73d",
+      "purpose": "Persisted RELEASE_ELIGIBLE decision for the Judge demo."
+    },
+    {
+      "path": "runtime/runs/TK-20260721-094338-7P7CMJ/gates.json",
+      "sha256": "52a88d480583ff10927ba40c7010a867c690e642ec5fc9bc56e76c1274aac4a4",
+      "purpose": "Persisted four-gate result for the Judge demo."
+    },
+    {
+      "path": "runtime/runs/TK-20260721-094338-7P7CMJ/checkmate-review-receipt.json",
+      "sha256": "9115ea19b75ee8b52947211d06b5b2a8347e805692ab78fd4dac12e5f2e8a00d",
+      "purpose": "Persisted review receipt bound to the Judge demo."
+    },
+    {
+      "path": "runtime/runs/TK-20260721-094338-7P7CMJ/sovereign-authorization-receipt.json",
+      "sha256": "0e1b03505d00366821d380a991437aac3199c1363533938abdf3c3125d435fbd",
+      "purpose": "Persisted authorization receipt bound to the Judge demo."
+    }
+  ],
+  "excluded": [
+    {
+      "path": "runtime/.thekey/evidence.key",
+      "reason": "Runtime secret material is intentionally not retained in the committed evidence set."
+    },
+    {
+      "path": "runtime/**/__pycache__/**",
+      "reason": "Generated interpreter cache is not evidence."
+    }
+  ]
+}
